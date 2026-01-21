@@ -23,14 +23,16 @@ enum Commands {
     Current, 
     Uninstall { version: String },
 }
-fn main() -> Result<()> {
+
+#[tokio::main]
+async fn main() -> Result<()> {
     init::init_rnvm()?;
     let cli = Cli::parse();
 
     match cli.commands {
        Commands::Install { version } => {
          println!("Installing node version : {}", version);
-         commands::install::run(version)?;
+         commands::install::run(version).await?;
        }, 
        Commands::Use { version } => {
          println!("Currently using : {}", version);
