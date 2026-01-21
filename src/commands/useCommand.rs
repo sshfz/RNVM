@@ -14,8 +14,8 @@ pub(crate) fn run(version: String) -> Result<()> {
     config::save(&config)?;
 
         println!(
-        r#"export RVM_HOME="{}"
-export PATH="$RVM_HOME/versions/v{}/bin:$PATH""#,
+        r#"export RNVM_HOME="{}"
+        export PATH="$RNVM_HOME/versions/v{}/bin:$PATH""#,
         rnvm_dirs().display(),
         version
     );

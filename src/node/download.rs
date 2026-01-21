@@ -16,6 +16,6 @@ pub(crate) async fn extract(archive:&Path, target:&Path) -> Result<()> {
     let file = File::open(archive)?;
     let decompressor = XzDecoder::new(file);
     let mut archive = Archive::new(decompressor);
-    archive.unpack(target);
+    archive.unpack(target)?;
     Ok(())
 }

@@ -35,7 +35,7 @@ async fn main() -> Result<()> {
          commands::install::run(version).await?;
        }, 
        Commands::Use { version } => {
-         println!("Currently using : {}", version);
+        //  println!("use {}", version);
          commands::useCommand::run(version)?;
        }, 
        Commands::Ls => { //ez
