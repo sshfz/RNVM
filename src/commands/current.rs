@@ -1,6 +1,6 @@
 use anyhow::{Ok, Result};
 
-use crate::config::{self, Config};
+use crate::config::{self};
 
 pub(crate) fn run() -> Result<()>{
    let cfg = config::load()?;
