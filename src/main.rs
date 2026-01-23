@@ -38,11 +38,11 @@ async fn main() -> Result<()> {
         //  println!("use {}", version);
          commands::useCommand::run(version)?;
        }, 
-       Commands::Ls => { //ez
+       Commands::Ls => {
          println!("Installed versions");
          commands::ls::run()?;
        }, 
-       Commands::Current => { //ez
+       Commands::Current => {
          println!("Current node verison");
          commands::current::run()?;
        }, 
