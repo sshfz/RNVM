@@ -13,6 +13,13 @@ node version manager from scratch in rust
 - ls - lists all the node binaries installed
 - current - prints current node executable
 - use - switches to a specific node version
-- uninstall - uninstall a node version
+- uninstall - uninstalls a node version
+
+### Build RVNM
+
+```bash 
+cargo build --release
+
+
 
 
