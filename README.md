@@ -20,4 +20,13 @@ node version manager from scratch in rust
 ```bash 
 cargo build --release
 ```
+This creates the binary at: 
+
+target/release/rnvm
+
+### RNVM must me available on your PATH to execute shell commands
+
+```bash
+sudo cp target/release/rnvm /usr/local/bin/rnvm
+```
 
