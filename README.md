@@ -30,3 +30,95 @@ target/release/rnvm
 sudo cp target/release/rnvm /usr/local/bin/rnvm
 ```
 
+verify 
+
+```bash 
+which rnvm
+```
+
+expected output: 
+/usr/local/bin/rnvm
+
+### Run RNVM once
+
+```bash 
+rnvm ls
+```
+
+this automatically creates below files in your hoem dir:
+
+```bash 
+~/.rnvm/
+ ├── versions/
+ ├── config.json
+ └── init.sh
+```
+
+### RNVM needs shell integration to switch Node versions without manual eval.
+Add the following line to your shell config.
+
+RNVM needs shell integration to switch Node versions without manual eval.
+Add the following line to your shell config.
+
+For zsh (macOS default)
+```bash 
+echo 'source ~/.rnvm/init.sh' >> ~/.zshrc
+source ~/.zshrc
+```
+
+For bash
+```bash 
+echo 'source ~/.rnvm/init.sh' >> ~/.zshrc
+source ~/.zshrc
+```
+
+This step is mandatory. Without this rnvm wont be able to change node versions.
+
+## Usage
+
+### Install a node version
+
+```bash 
+rnvm install 18.19.0
+```
+
+### List installed Node versions
+
+```bash 
+rnvm ls
+```
+
+### Switch to a node version
+
+```bash 
+rnvm use 18.9.0
+```
+
+### Verify
+
+```bash 
+node --version
+```
+
+### Show current node executable
+
+```bash
+rnvm current
+```
+
+### Uninstall a node version
+
+```bash 
+rnvm uninstall 18.9.0
+```
+
+### directory layout 
+
+```bash 
+~/.rnvm/
+ ├── versions/
+ │    ├── v18.19.0/
+ │    ├── v20.11.0/
+ ├── config.json
+ └── init.sh
+```
