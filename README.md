@@ -19,7 +19,5 @@ node version manager from scratch in rust
 
 ```bash 
 cargo build --release
-
-
-
+```
 
