@@ -9,7 +9,7 @@ node version manager from scratch in rust
 
 ## Commands
 
-- install - Installs a node verison
+- install - Installs a node version
 - ls - lists all the node binaries installed
 - current - prints current node executable
 - use - switches to a specific node version
@@ -112,7 +112,7 @@ rnvm current
 rnvm uninstall 18.9.0
 ```
 
-### directory layout 
+### Directory layout 
 
 ```bash 
 ~/.rnvm/
